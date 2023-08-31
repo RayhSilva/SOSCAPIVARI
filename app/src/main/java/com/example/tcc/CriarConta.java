@@ -2,6 +2,7 @@ package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
@@ -10,12 +11,14 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 public class CriarConta extends AppCompatActivity {
         EditText txtNomeC,txtEmailC, txtConfEmail, txtSenhaC, txtConfSenha;
         Button btnCadastrar;
-        SQLiteDatabase bancoDados;
+        ProgressBar progressBar;
 
+    public static Activity activity;
 
 
     @Override
@@ -23,23 +26,30 @@ public class CriarConta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_criar_conta);
 
+        activity = this;
+
         txtNomeC = (EditText) findViewById(R.id.txtNomeC);
         txtEmailC = (EditText) findViewById(R.id.txtEmailC);
         txtConfEmail = (EditText) findViewById(R.id.txtConfEmail);
         txtSenhaC = (EditText) findViewById(R.id.txtSenhaC);
         txtConfSenha = (EditText) findViewById(R.id.txtConfSenhaC);
         btnCadastrar = (Button) findViewById(R.id.btnEntrar);
-        String strnome = txtNomeC.getText().toString();
-        String strEmailC = txtEmailC.getText().toString();
-        String strSenhaC = txtSenhaC.getText().toString();
+        progressBar= (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
 
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Cadastrar();
                 // vai chamar o metodo de fazer login
+
+                String strnome = txtNomeC.getText().toString();
+                String strEmailC = txtEmailC.getText().toString();
+                String strSenhaC = txtSenhaC.getText().toString();
+
+                progressBar.setVisibility(View.VISIBLE);
                 DatabaseHelper helper = new DatabaseHelper(getApplication());
-                helper.criarUsuario(strnome,strEmailC, strSenhaC);
+                helper.criarUsuario(strnome,strEmailC, strSenhaC, progressBar);
 
             }
         });
