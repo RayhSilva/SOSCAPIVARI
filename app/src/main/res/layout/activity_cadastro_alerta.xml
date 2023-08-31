@@ -21,13 +21,109 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="216dp"
+        android:layout_height="52dp"
+        android:text="Cadastro para Alertas"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNomeC4"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEntrar4"
+        style="@style/Buttonn"
+        android:layout_width="178dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="4dp"
+        android:text="cadastrar"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponentes8"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
+
+    <EditText
+        android:id="@+id/txtNomeC4"
+        style="@style/Edit_Text"
+        android:layout_width="265dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Rua"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtNomeC10"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
+
+    <EditText
+        android:id="@+id/txtNomeC6"
+        style="@style/Edit_Text"
+        android:layout_width="266dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Bairro"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtNomeC7"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
+
+    <EditText
+        android:id="@+id/txtNomeC7"
+        style="@style/Edit_Text"
+        android:layout_width="266dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Complemento"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtNomeC8"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
+
+    <EditText
+        android:id="@+id/txtNomeC10"
+        style="@style/Edit_Text"
+        android:layout_width="266dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="8dp"
+        android:hint="N°"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtNomeC6"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
+
+    <EditText
+        android:id="@+id/txtNomeC8"
+        style="@style/Edit_Text"
+        android:layout_width="266dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="8dp"
+        android:hint="CEP"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtNomeC9"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
+
+    <EditText
+        android:id="@+id/txtNomeC9"
+        style="@style/Edit_Text"
+        android:layout_width="266dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Ponto de Referência"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btnEntrar4"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
+
     <ImageView
         android:id="@+id/alerta3"
-        android:layout_width="99dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="118dp"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8"
         app:layout_constraintTop_toTopOf="@+id/containerComponentes8"
         app:srcCompat="@drawable/alerta" />

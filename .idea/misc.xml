@@ -4,6 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/IFSP/Downloads/TCC1408-1390b3c8e6b66bbba09a886b7b4cc91345328a2e/TCC1408-1390b3c8e6b66bbba09a886b7b4cc91345328a2e/app/src/main/res/layout/activity_criar_conta.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_adm.xml" value="0.2930253623188406" />
+        <entry key="app/src/main/res/layout/activity_cadastro_alerta.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_criar_conta.xml" value="0.2930253623188406" />
+        <entry key="app/src/main/res/layout/activity_noticia.xml" value="0.17401215805471124" />
+        <entry key="app/src/main/res/layout/activity_prevencao.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/tela_principal.xml" value="0.33" />
       </map>
     </option>
   </component>
