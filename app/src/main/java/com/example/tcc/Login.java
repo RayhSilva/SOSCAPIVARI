@@ -17,13 +17,14 @@ public class Login extends AppCompatActivity {
     Button btnEntrar;
      SQLiteDatabase bancoDados;
     ProgressBar progressbar;
-
+    public static Login login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        login = this;
 
         txtEmailL = (EditText) findViewById(R.id.txtEmailL);
         txtSenhaL = (EditText) findViewById(R.id.txtSenhaL);
