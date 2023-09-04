@@ -29,12 +29,12 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtNomeC4"
+        app:layout_constraintBottom_toTopOf="@+id/txtRua"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnEntrar4"
+        android:id="@+id/btnCadastrarAlerta"
         style="@style/Buttonn"
         android:layout_width="178dp"
         android:layout_height="61dp"
@@ -45,74 +45,74 @@
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
-        android:id="@+id/txtNomeC4"
+        android:id="@+id/txtRua"
         style="@style/Edit_Text"
         android:layout_width="265dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
         android:hint="Rua"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtNomeC10"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumero"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
-        android:id="@+id/txtNomeC6"
+        android:id="@+id/txtBairro"
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
         android:layout_marginBottom="8dp"
         android:hint="Bairro"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtNomeC7"
+        app:layout_constraintBottom_toTopOf="@+id/txtComplemento"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
-        android:id="@+id/txtNomeC7"
+        android:id="@+id/txtComplemento"
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
         android:layout_marginBottom="8dp"
         android:hint="Complemento"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtNomeC8"
+        app:layout_constraintBottom_toTopOf="@+id/txtCEP"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
-        android:id="@+id/txtNomeC10"
+        android:id="@+id/txtNumero"
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
         android:layout_marginBottom="8dp"
         android:hint="N°"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtNomeC6"
+        app:layout_constraintBottom_toTopOf="@+id/txtBairro"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
-        android:id="@+id/txtNomeC8"
+        android:id="@+id/txtCEP"
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
         android:layout_marginBottom="8dp"
         android:hint="CEP"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtNomeC9"
+        app:layout_constraintBottom_toTopOf="@+id/txtPontoRef"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
-        android:id="@+id/txtNomeC9"
+        android:id="@+id/txtPontoRef"
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
         android:layout_marginBottom="20dp"
         android:hint="Ponto de Referência"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/btnEntrar4"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrarAlerta"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />

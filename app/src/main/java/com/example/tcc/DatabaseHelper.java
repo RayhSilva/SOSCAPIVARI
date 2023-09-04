@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -119,4 +120,31 @@ public class DatabaseHelper {
         });
 
     }
+
+    public void inseriralerta(String strRua, String strNumero, String strBairro, String strCEP, String strPontoRef, String strComplemento) {
+
+    String id = reference.child("CadastroA").push().getKey();
+    MovimentoOBJ movimentoOBJ = new MovimentoOBJ (id, strRua , strNumero, strBairro, strCEP, strPontoRef, strComplemento );
+
+    reference.child("CadastroA").child(id).setValue(movimentoOBJ).addOnSuccessListener(new OnSuccessListener<Void>() {
+        @Override
+        public void onSuccess(Void unused) {
+            Toast.makeText(context, "Alerta Inserido", Toast.LENGTH_SHORT).show();
+            //CadastroAlerta la = new CadastroAlerta();
+            //la.activity.finish();
+
+        }
+    });
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
