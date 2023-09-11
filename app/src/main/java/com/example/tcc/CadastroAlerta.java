@@ -33,7 +33,7 @@ public static Activity activity;
         txtCEP = (EditText) findViewById(R.id.txtCEP);
         txtPontoRef = (EditText) findViewById(R.id.txtPontoRef);
         txtComplemento = (EditText) findViewById(R.id.txtComplemento);
-
+        btnCadastrarAlerta = (Button) findViewById(R.id.btnCadastrarAlerta);
 
 
         btnCadastrarAlerta.setOnClickListener(new View.OnClickListener() {

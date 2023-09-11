@@ -8,15 +8,24 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class Alerta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alerta);
+
+
+    DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
+    helper.ListarAlertas();
     }
 
-
+    public interface ListarAlertasCallback{
+        void ListarAlertasOnCallback(ArrayList<MovimentoOBJ> listaMovimentos);
+        // PAREI NO MINUTO 23:36
+    }
 
     @Override
     public boolean onCreateOptionsMenu (Menu menu) {

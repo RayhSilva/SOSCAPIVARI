@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -18,12 +19,20 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.sql.Array;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 public class DatabaseHelper {
 
     Context context;
     ProgressBar progressbar;
+
+    ArrayList<MovimentoOBJ> listaAlertas;
+
     public DatabaseHelper(Context context) {
         this.context = context;
     }
@@ -68,7 +77,7 @@ public class DatabaseHelper {
   });
 
     }
-//AUTENTICAR USUARIO
+
     public void autenticaUsuario(String txtEmailL, String txtSenhaL) {
 
         auth.signInWithEmailAndPassword(txtEmailL,txtSenhaL ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -130,11 +139,46 @@ public class DatabaseHelper {
         @Override
         public void onSuccess(Void unused) {
             Toast.makeText(context, "Alerta Inserido", Toast.LENGTH_SHORT).show();
-            //CadastroAlerta la = new CadastroAlerta();
-            //la.activity.finish();
+            CadastroAlerta la = new CadastroAlerta();
+            la.activity.finish();
 
         }
+    }).addOnFailureListener(new OnFailureListener() {
+        @Override
+        public void onFailure(@NonNull Exception e) {
+            Toast.makeText(context, "Falha ao Inserir Alerta\n"+e, Toast.LENGTH_LONG).show();
+        }
     });
+
+    }
+
+    public void ListarAlertas() {
+        DatabaseReference ref = reference.child("CadastroA");
+
+        Query query = ref.orderByChild("bairro");
+
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                listaAlertas = new ArrayList<MovimentoOBJ>();
+                for(DataSnapshot data : snapshot.getChildren()){
+                    String id = data.child("id").getValue().toString();
+                    String Rua = data.child("Rua").getValue().toString();
+                    String Numero = data.child("Numero").getValue().toString();
+                    String Bairro = data.child("Bairro").getValue().toString();
+                    String CEP = data.child("CEP").getValue().toString();
+                    String PontoRef = data.child("PontoRef").getValue().toString();
+                    String Complemento = data.child("Complemento").getValue().toString();
+
+                    MovimentoOBJ movimentoOBJ = new MovimentoOBJ (id, Rua, Numero, Bairro, CEP, PontoRef, Complemento);
+                    listaAlertas.add(movimentoOBJ);
+                }}
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
 }
