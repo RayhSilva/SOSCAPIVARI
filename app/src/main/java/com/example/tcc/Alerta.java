@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Alerta extends AppCompatActivity {
@@ -18,14 +19,24 @@ public class Alerta extends AppCompatActivity {
         setContentView(R.layout.activity_alerta);
 
 
-    DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
-    helper.ListarAlertas();
+        DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
+        helper.ListarAlertas(new listarAlertasCallback(){
+
+
+            @Override
+            public void listarAlertasOnCallback(ArrayList<MovimentoOBJ> listaMovimentos) {
+                System.out.println(listaMovimentos.size());
+                //setar o adapter do rw
+            }
+        });
     }
 
-    public interface ListarAlertasCallback{
-        void ListarAlertasOnCallback(ArrayList<MovimentoOBJ> listaMovimentos);
-        // PAREI NO MINUTO 23:36
-    }
+        public interface listarAlertasCallback {
+            void listarAlertasOnCallback(ArrayList<MovimentoOBJ> listaMovimentos);
+            // PAREI NO MINUTO 23:36
+        }
+
+
 
     @Override
     public boolean onCreateOptionsMenu (Menu menu) {

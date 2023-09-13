@@ -53,7 +53,7 @@ public static Activity activity;
                 }
                 DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
                 helper.inseriralerta(strRua,strNumero,strBairro, strCEP, strPontoRef, strComplemento );
-
+                System.out.println("oiiiiii");
             }
         });
     }

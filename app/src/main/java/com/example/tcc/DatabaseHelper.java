@@ -152,7 +152,7 @@ public class DatabaseHelper {
 
     }
 
-    public void ListarAlertas() {
+    public void ListarAlertas(Alerta.listarAlertasCallback listarAlertasCallback) {
         DatabaseReference ref = reference.child("CadastroA");
 
         Query query = ref.orderByChild("bairro");
@@ -172,7 +172,11 @@ public class DatabaseHelper {
 
                     MovimentoOBJ movimentoOBJ = new MovimentoOBJ (id, Rua, Numero, Bairro, CEP, PontoRef, Complemento);
                     listaAlertas.add(movimentoOBJ);
-                }}
+                }
+                listarAlertasCallback.listarAlertasOnCallback(listaAlertas);
+                // parei no minuto 25:47 - esta dasndo erro nessa tela, por causa da string na linha
+                //166
+            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
