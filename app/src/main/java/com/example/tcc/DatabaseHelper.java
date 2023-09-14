@@ -163,12 +163,12 @@ public class DatabaseHelper {
                 listaAlertas = new ArrayList<MovimentoOBJ>();
                 for(DataSnapshot data : snapshot.getChildren()){
                     String id = data.child("id").getValue().toString();
-                    String Rua = data.child("Rua").getValue().toString();
-                    String Numero = data.child("Numero").getValue().toString();
-                    String Bairro = data.child("Bairro").getValue().toString();
-                    String CEP = data.child("CEP").getValue().toString();
-                    String PontoRef = data.child("PontoRef").getValue().toString();
-                    String Complemento = data.child("Complemento").getValue().toString();
+                   String Rua = data.child("rua").getValue().toString();
+                    String Numero = data.child("numero").getValue().toString();
+                    String Bairro = data.child("bairro").getValue().toString();
+                    String CEP = data.child("cep").getValue().toString();
+                    String PontoRef = data.child("pontoRef").getValue().toString();
+                    String Complemento = data.child("complemento").getValue().toString();
 
                     MovimentoOBJ movimentoOBJ = new MovimentoOBJ (id, Rua, Numero, Bairro, CEP, PontoRef, Complemento);
                     listaAlertas.add(movimentoOBJ);
@@ -184,6 +184,9 @@ public class DatabaseHelper {
             }
         });
 
+    }
+
+    public void inseriralerta(String strRua, String strBairro) {
     }
 }
 

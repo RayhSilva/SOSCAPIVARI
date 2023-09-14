@@ -15,7 +15,6 @@ import android.widget.Toast;
 public class Login extends AppCompatActivity {
     EditText txtEmailL, txtSenhaL;
     Button btnEntrar;
-     SQLiteDatabase bancoDados;
     ProgressBar progressbar;
     public static Login login;
 

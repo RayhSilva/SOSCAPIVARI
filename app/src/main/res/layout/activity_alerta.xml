@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnEntrar2"
+        android:id="@+id/btnCadastrar"
         style="@style/Buttonn"
         android:layout_width="262dp"
         android:layout_height="64dp"
@@ -59,4 +59,14 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes7"
         app:layout_constraintTop_toBottomOf="@+id/alerta2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcwAlerta"
+        android:layout_width="296dp"
+        android:layout_height="324dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.453" />
 </androidx.constraintlayout.widget.ConstraintLayout>
