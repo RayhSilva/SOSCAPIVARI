@@ -12,16 +12,18 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Alerta extends AppCompatActivity {
 
-    RecyclerView rcwAlerta;
+    ListView lista;
     Button btnCadastrar;
 
     @Override
@@ -29,7 +31,7 @@ public class Alerta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alerta);
 
-        rcwAlerta = (RecyclerView) findViewById(R.id.rcwAlerta);
+        lista = (ListView) findViewById(R.id.lista);
         btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
 
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
@@ -47,22 +49,40 @@ public class Alerta extends AppCompatActivity {
 
             @Override
             public void listarAlertasOnCallback(ArrayList<MovimentoOBJ> listaMovimentos) {
-               // System.out.println(listaMovimentos.size());
+               System.out.println(listaMovimentos.size());
                 //setar o adapter do rw
+                /*
                rcwAlerta.setAdapter(new AdapterAlertas(listaMovimentos));
                RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(),
                        LinearLayoutManager.VERTICAL, false);
-               rcwAlerta.setLayoutManager(layoutManager);
+               rcwAlerta.setLayoutManager(layoutManager); */
+
+          preencherLista(listaMovimentos);
 
             }
         });
     }
 
+        public void preencherLista(ArrayList<MovimentoOBJ> listaMovimentos){
+            ArrayList<String> linhas = new ArrayList<String>();
+            ArrayAdapter meuAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
+                    android.R.id.text1, linhas);
+
+            lista.setAdapter(meuAdapter);
+            for (int i=0; i<listaMovimentos.size(); i++){
+                MovimentoOBJ mv= listaMovimentos.get(i);
+                linhas.add(mv.getRua()+ "," + mv.getNumero() + "," + mv.getBairro() + "," + mv.getComplemento() + ","
+                        + mv.getCEP() + "," + mv.getPontoRef() + ",");
+
+            }
+
+        }
+
         public interface listarAlertasCallback {
             void listarAlertasOnCallback(ArrayList<MovimentoOBJ> listaMovimentos);
             // PAREI NO MINUTO 23:36
         }
-
+/*
         public class AdapterAlertas extends RecyclerView.Adapter{
                  ArrayList<MovimentoOBJ> movimentoOBJ;
 
@@ -86,8 +106,7 @@ public class Alerta extends AppCompatActivity {
                 return 0;
             }
         }
-
-
+*/
 
     @Override
     public boolean onCreateOptionsMenu (Menu menu) {

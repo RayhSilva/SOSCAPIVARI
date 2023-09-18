@@ -60,13 +60,15 @@
         app:layout_constraintStart_toStartOf="@+id/containerComponentes7"
         app:layout_constraintTop_toBottomOf="@+id/alerta2" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcwAlerta"
-        android:layout_width="296dp"
-        android:layout_height="324dp"
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes7"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes7"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintVertical_bias="0.223" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,11 +49,11 @@
         style="@style/Edit_Text"
         android:layout_width="265dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
         android:hint="Rua"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtNumero"
+        app:layout_constraintBottom_toTopOf="@+id/txtBairro"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
@@ -88,20 +88,20 @@
         android:layout_marginBottom="8dp"
         android:hint="N°"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtBairro"
-        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
-        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+        tools:layout_editor_absoluteX="74dp" />
 
     <EditText
         android:id="@+id/txtCEP"
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:hint="CEP"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/txtPontoRef"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
