@@ -57,7 +57,7 @@ public class TelaInicial extends AppCompatActivity {
                 Cadastro_Entrar();
             }
         });
-            criarBancoDados();
+
 
 
         // Initialize Firebase Auth
@@ -93,11 +93,11 @@ public class TelaInicial extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            System.out.println("LOGADO!");
+                           // System.out.println("LOGADO!");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            System.out.println("ID do usuário: " + user);
-                            Toast.makeText(TelaInicial.this, "Authentication OK.\n" + user,
-                                    Toast.LENGTH_SHORT).show();
+                           // System.out.println("ID do usuário: " + user);
+                            //Toast.makeText(TelaInicial.this, "Authentication OK.\n" + user,
+                              //      Toast.LENGTH_SHORT).show();
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -109,7 +109,7 @@ public class TelaInicial extends AppCompatActivity {
                     }
                 });
     }
-
+/*
     public void criarBancoDados () {
 
         try {
@@ -127,7 +127,7 @@ public class TelaInicial extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
+*/
 
     public void Cadastro_Entrar() {
         Intent intent = new Intent(this, Login.class);

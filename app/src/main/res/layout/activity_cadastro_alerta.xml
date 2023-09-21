@@ -23,14 +23,16 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="216dp"
-        android:layout_height="52dp"
+        android:layout_width="240dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="4dp"
         android:text="Cadastro para Alertas"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/txtRua"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -49,11 +51,12 @@
         style="@style/Edit_Text"
         android:layout_width="265dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
         android:hint="Rua"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtBairro"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumero"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
-        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
@@ -61,7 +64,7 @@
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:hint="Bairro"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/txtComplemento"
@@ -85,23 +88,23 @@
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:hint="N°"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/textView16"
-        tools:layout_editor_absoluteX="74dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtBairro"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
         android:id="@+id/txtCEP"
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:hint="CEP"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/txtPontoRef"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
-        app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
@@ -109,12 +112,11 @@
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:hint="Ponto de Referência"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/btnCadastrarAlerta"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
-        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <ImageView
@@ -126,5 +128,6 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8"
         app:layout_constraintTop_toTopOf="@+id/containerComponentes8"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/alerta" />
 </androidx.constraintlayout.widget.ConstraintLayout>
