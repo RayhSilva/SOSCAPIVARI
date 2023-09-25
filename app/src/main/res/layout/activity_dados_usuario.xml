@@ -7,17 +7,27 @@
     android:background="@drawable/background"
     tools:context=".DadosUsuario">
 
-    <View
-        android:id="@+id/containerComponentes3"
-        style="@style/ContainerComponents"
-        android:layout_width="352dp"
-        android:layout_height="627dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="1dp"
-        android:backgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="248dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.294"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/userrr" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="78dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/ic_email" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

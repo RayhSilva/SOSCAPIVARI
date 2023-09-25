@@ -10,21 +10,31 @@
     <View
         android:id="@+id/containerComponentes8"
         style="@style/ContainerComponents"
-        android:layout_width="352dp"
-        android:layout_height="627dp"
+        android:layout_width="351dp"
+        android:layout_height="623dp"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="12dp"
         android:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrarAlerta"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="240dp"
-        android:layout_height="49dp"
+        android:layout_width="233dp"
+        android:layout_height="41dp"
         android:layout_marginBottom="4dp"
         android:text="Cadastro para Alertas"
         android:textAlignment="center"
@@ -32,7 +42,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/txtRua"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -40,10 +50,10 @@
         style="@style/Buttonn"
         android:layout_width="178dp"
         android:layout_height="61dp"
-        android:layout_marginBottom="4dp"
         android:text="cadastrar"
         app:layout_constraintBottom_toBottomOf="@+id/containerComponentes8"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
@@ -56,7 +66,6 @@
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/txtNumero"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
@@ -69,6 +78,7 @@
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/txtComplemento"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
@@ -76,7 +86,7 @@
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:hint="Complemento"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/txtCEP"
@@ -100,11 +110,12 @@
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:hint="CEP"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/txtPontoRef"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <EditText
@@ -112,11 +123,12 @@
         style="@style/Edit_Text"
         android:layout_width="266dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="52dp"
         android:hint="Ponto de Referência"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/btnCadastrarAlerta"
         app:layout_constraintEnd_toEndOf="@+id/containerComponentes8"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8" />
 
     <ImageView
@@ -128,6 +140,6 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/containerComponentes8"
         app:layout_constraintTop_toTopOf="@+id/containerComponentes8"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/alerta" />
 </androidx.constraintlayout.widget.ConstraintLayout>

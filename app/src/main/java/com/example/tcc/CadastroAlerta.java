@@ -11,11 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class CadastroAlerta extends AppCompatActivity {
     EditText txtRua, txtNumero, txtBairro, txtCEP, txtPontoRef, txtComplemento;
    Button btnCadastrarAlerta;
+    ProgressBar progressBar;
 
 
 public static Activity activity;
@@ -34,6 +36,8 @@ public static Activity activity;
         txtPontoRef = (EditText) findViewById(R.id.txtPontoRef);
         txtComplemento = (EditText) findViewById(R.id.txtComplemento);
         btnCadastrarAlerta = (Button) findViewById(R.id.btnCadastrarAlerta);
+        progressBar= (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
 
 
         btnCadastrarAlerta.setOnClickListener(new View.OnClickListener() {
@@ -51,9 +55,11 @@ public static Activity activity;
                         strRua.equals("") || strNumero.equals("")  || strPontoRef.equals("") );{
                     Toast.makeText(CadastroAlerta.this, "Preencha os Campos para salvar", Toast.LENGTH_SHORT).show();
                 }
+                progressBar.setVisibility(View.VISIBLE);
+
                 DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
                 helper.inseriralerta(strRua,strNumero,strBairro, strCEP, strPontoRef, strComplemento );
-                System.out.println("oiiiiii");
+
             }
         });
     }

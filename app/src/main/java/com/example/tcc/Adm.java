@@ -25,7 +25,7 @@ public class Adm extends AppCompatActivity {
 
         txtRua = (EditText) findViewById(R.id.txtRua);
         txtBairro= (EditText) findViewById(R.id.txtBairro);
-        btnEntrar= (Button) findViewById(R.id.btnEntrar);
+        btnEntrar= (Button) findViewById(R.id.btnEnviar);
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,15 +35,19 @@ public class Adm extends AppCompatActivity {
                 String strRua = txtRua.getText().toString();
                 String strBairro = txtBairro.getText().toString();
 
-                DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
-                helper.inseriralerta(strRua, strBairro );
-               // System.out.println("oiiiiii");
+               DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
+
+                System.out.println("oiiiiii");
 
             }
         });
+
+
+
+
     }
 
-    DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
+    //DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
 
     @Override
     public boolean onCreateOptionsMenu (Menu menu) {

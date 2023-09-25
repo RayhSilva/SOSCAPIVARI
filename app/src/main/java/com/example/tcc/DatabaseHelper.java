@@ -186,8 +186,6 @@ public class DatabaseHelper {
 
     }
 
-    public void inseriralerta(String strRua, String strBairro) {
-    }
 }
 
 

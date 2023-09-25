@@ -108,7 +108,8 @@
         android:layout_width="207dp"
         android:layout_height="202dp"
         app:layout_constraintBottom_toTopOf="@+id/btnEnviar"
-        tools:layout_editor_absoluteX="57dp">
+        app:layout_constraintEnd_toEndOf="@+id/containerComponentes4"
+        app:layout_constraintStart_toStartOf="@+id/containerComponentes4">
 
         <RadioButton
             android:id="@+id/rdLeve"
