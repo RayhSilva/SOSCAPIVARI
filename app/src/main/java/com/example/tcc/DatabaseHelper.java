@@ -186,6 +186,20 @@ public class DatabaseHelper {
 
     }
 
+    public void alertaAdm(String strRua, String strBairro, String strLeve, String strModerado, String strSevero) {
+        String id = reference.child("admAlertas").push().getKey();
+        MovimentoOBJ movimentoOBJ = new MovimentoOBJ (id, strRua, strBairro, strLeve, strModerado, strSevero);
+
+        reference.child("admAlertas").child(id).setValue(movimentoOBJ).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Toast.makeText(context, "Alerta Enviado", Toast.LENGTH_SHORT).show();
+                Adm la = new Adm ();
+                la.activity.finish();
+            }
+        });
+        
+    }
 }
 
 

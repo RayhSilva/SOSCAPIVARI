@@ -2,7 +2,7 @@ package com.example.tcc;
 
 public class MovimentoOBJ {
 
-    String id, Rua, Numero, Bairro, CEP, PontoRef, Complemento;
+    String id, Rua, Numero, Bairro, CEP, PontoRef, Complemento , Leve, Moderado, Severo  ;
 
     public MovimentoOBJ(String id, String rua, String numero, String bairro, String CEP, String pontoRef, String complemento) {
         this.id = id;
@@ -13,6 +13,19 @@ public class MovimentoOBJ {
         PontoRef = pontoRef;
         Complemento = complemento;
     }
+
+    public MovimentoOBJ(String id, String strRua, String strBairro, String strLeve, String strModerado, String strSevero) {
+        this.id = id;
+        Rua = strRua;
+        Bairro = strBairro;
+        Severo = strSevero;
+        Leve = strLeve;
+        Moderado = strModerado;
+
+    }
+
+
+
 
     public String getId() {
         return id;

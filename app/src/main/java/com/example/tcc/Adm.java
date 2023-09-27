@@ -2,6 +2,7 @@ package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,14 +19,21 @@ public class Adm extends AppCompatActivity {
     Button btnEntrar;
 
 
+    public static Activity activity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adm);
 
+        activity  = this;
+
         txtRua = (EditText) findViewById(R.id.txtRua);
         txtBairro= (EditText) findViewById(R.id.txtBairro);
         btnEntrar= (Button) findViewById(R.id.btnEnviar);
+        rdLeve = (RadioButton) findViewById(R.id.rdLeve);
+        rdModerado = (RadioButton) findViewById(R.id.rdModerado);
+        rdSevero = (RadioButton) findViewById(R.id.rdSevero);
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,8 +42,12 @@ public class Adm extends AppCompatActivity {
 
                 String strRua = txtRua.getText().toString();
                 String strBairro = txtBairro.getText().toString();
+                String strLeve = rdLeve.getText().toString();
+                String strModerado = rdModerado.getText().toString();
+                String strSevero = rdSevero.getText().toString();
 
                DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
+                helper.alertaAdm(strRua, strBairro, strLeve, strModerado, strSevero);
 
                 System.out.println("oiiiiii");
 
