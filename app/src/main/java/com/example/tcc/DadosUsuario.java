@@ -7,16 +7,42 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class DadosUsuario extends AppCompatActivity {
+
+    private TextView nomeUsuatio, emailUsuario;
+    private Button deslogar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dados_usuario);
+
+        iniciarComponentes();
+
+        deslogar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(DadosUsuario.this,Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
 
+        private void iniciarComponentes( ){
+            nomeUsuatio =  findViewById(R.id.nomeUsuario);
+            emailUsuario  = findViewById(R.id.emailUsuario);
+            deslogar = findViewById(R.id.deslogar);
+
+        }
 
     @Override
     public boolean onCreateOptionsMenu (Menu menu) {
