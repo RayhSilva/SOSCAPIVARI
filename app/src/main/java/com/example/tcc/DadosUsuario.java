@@ -12,11 +12,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.lang.annotation.Documented;
 
 public class DadosUsuario extends AppCompatActivity {
 
     private TextView nomeUsuatio, emailUsuario;
     private Button deslogar;
+    //FirebaseFirestore db = FirebaseFirestore.getInstance();
+   // String usuarioId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +41,16 @@ public class DadosUsuario extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
 
-        private void iniciarComponentes( ){
+        //usuarioId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        // terminar a tela dados usuario
+    }
+
+    private void iniciarComponentes( ){
             nomeUsuatio =  findViewById(R.id.nomeUsuario);
             emailUsuario  = findViewById(R.id.emailUsuario);
             deslogar = findViewById(R.id.deslogar);
