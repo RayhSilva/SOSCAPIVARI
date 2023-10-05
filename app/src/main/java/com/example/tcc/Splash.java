@@ -37,7 +37,7 @@ public class Splash extends AppCompatActivity {
 
                         // Get new FCM registration token
                         String token = task.getResult();
-                        System.out.println("aquiiiiiiiiii");
+                        //System.out.println("aquiiiiiiiiii");
                         // Log and toast
                        // String msg = getString(R.string.msg_token_fmt, token);
                         System.out.println(token);

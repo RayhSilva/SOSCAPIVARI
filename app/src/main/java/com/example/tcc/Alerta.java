@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -138,8 +139,12 @@ public class Alerta extends AppCompatActivity {
         startActivity(intent);
     }
     public void adm() {
-        Intent intent = new Intent(this, Adm.class);
-        startActivity(intent);
+        String url = "https://firebase.rafaelwendel.com/";
+        Intent urlIntent = new Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(url)
+        );
+        startActivity(urlIntent);
     }
 
     public void cadastrarAlerta() {

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -96,8 +97,12 @@ public static Activity activity;
         startActivity(intent);
     }
     public void adm() {
-        Intent intent = new Intent(this, Adm.class);
-        startActivity(intent);
+        String url = "https://firebase.rafaelwendel.com/";
+        Intent urlIntent = new Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(url)
+        );
+        startActivity(urlIntent);
     }
 
 

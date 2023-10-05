@@ -185,7 +185,7 @@ public class DatabaseHelper {
         });
 
     }
-
+/*
     public void alertaAdm(String strRua, String strBairro, String strLeve, String strModerado, String strSevero) {
         String id = reference.child("admAlertas").push().getKey();
         MovimentoOBJ movimentoOBJ = new MovimentoOBJ (id, strRua, strBairro, strLeve, strModerado, strSevero);
@@ -199,7 +199,7 @@ public class DatabaseHelper {
             }
         });
         
-    }
+    }*/
 }
 
 

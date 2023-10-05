@@ -3,6 +3,7 @@ package com.example.tcc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 
@@ -126,8 +127,12 @@ public class TelaPrincipal extends AppCompatActivity {
             startActivity(intent);
         }
     public void adm() {
-        Intent intent = new Intent(this, Adm.class);
-        startActivity(intent);
+        String url = "https://firebase.rafaelwendel.com/";
+        Intent urlIntent = new Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(url)
+        );
+        startActivity(urlIntent);
     }
 
     public void botaomais() {

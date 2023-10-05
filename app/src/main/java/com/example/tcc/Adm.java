@@ -1,4 +1,4 @@
-package com.example.tcc;
+/*package com.example.tcc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -96,3 +96,4 @@ public class Adm extends AppCompatActivity {
     }
 }
 
+*/

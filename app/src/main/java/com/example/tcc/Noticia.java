@@ -63,7 +63,11 @@ public class Noticia extends AppCompatActivity {
         startActivity(intent);
     }
     public void adm() {
-        Intent intent = new Intent(this, Adm.class);
-        startActivity(intent);
+        String url = "https://firebase.rafaelwendel.com/";
+        Intent urlIntent = new Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(url)
+        );
+        startActivity(urlIntent);
     }
 }

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class CriarConta extends AppCompatActivity {
         EditText txtNomeC,txtEmailC, txtConfEmail, txtSenhaC, txtConfSenha;
@@ -43,16 +44,13 @@ public class CriarConta extends AppCompatActivity {
                 //Cadastrar();
                 // vai chamar o metodo de fazer login
 
-                String strnome = txtNomeC.getText().toString();
-                String strEmailC = txtEmailC.getText().toString();
-                String strSenhaC = txtSenhaC.getText().toString();
 
-                progressBar.setVisibility(View.VISIBLE);
-                DatabaseHelper helper = new DatabaseHelper(getApplication());
-                helper.criarUsuario(strnome,strEmailC, strSenhaC, progressBar);
+
+                cadastrarusuario();
 
             }
         });
+
 
     }
 
@@ -89,7 +87,28 @@ public class CriarConta extends AppCompatActivity {
         Intent intent = new Intent(this, TelaPrincipal.class);
         startActivity(intent);}
 
+    public void cadastrarusuario(){
 
+        String strnome = txtNomeC.getText().toString();
+        String strEmailC = txtEmailC.getText().toString();
+        String strConfEmail = txtConfEmail.getText().toString();
+        String strSenhaC = txtSenhaC.getText().toString();
+        String strConfSenha = txtConfSenha.getText().toString();
+
+
+        if(!strEmailC.equals(strConfEmail)){
+            Toast.makeText(this, "Confira se o e-mail está correto", Toast.LENGTH_SHORT).show();
+        }
+        else if (!strSenhaC.equals(strConfSenha)){
+            Toast.makeText(this, "Confira se a senha está correto", Toast.LENGTH_SHORT).show();
+        }
+        else {
+
+            progressBar.setVisibility(View.VISIBLE);
+            DatabaseHelper helper = new DatabaseHelper(getApplication());
+            helper.criarUsuario(strnome, strEmailC, strSenhaC, progressBar);
+        }
+    }
 
 
 

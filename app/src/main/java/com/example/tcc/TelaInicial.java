@@ -64,7 +64,7 @@ public class TelaInicial extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser == null){
-            System.out.println("tentando logar");
+            //System.out.println("tentando logar");
             reload("teste@teste.com", "123456");
             Toast.makeText(TelaInicial.this, "Authentication OK.",
                     Toast.LENGTH_SHORT).show();
