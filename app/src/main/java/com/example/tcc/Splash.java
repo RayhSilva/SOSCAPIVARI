@@ -41,8 +41,8 @@ public class Splash extends AppCompatActivity {
                         // Log and toast
                        // String msg = getString(R.string.msg_token_fmt, token);
                         System.out.println(token);
-                        Toast.makeText(Splash.this,"Your device registration token is"
-                                + token, Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(Splash.this,"Your device registration token is"
+                              //  + token, Toast.LENGTH_SHORT).show();
                     }
                 });
 

@@ -66,14 +66,14 @@ public class TelaInicial extends AppCompatActivity {
         if(currentUser == null){
             //System.out.println("tentando logar");
             reload("teste@teste.com", "123456");
-            Toast.makeText(TelaInicial.this, "Authentication OK.",
-                    Toast.LENGTH_SHORT).show();
+            //Toast.makeText(TelaInicial.this, "Authentication OK.",
+                   // Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(TelaInicial.this, "Usuário logado:\n"+
+           /* Toast.makeText(TelaInicial.this, "Usuário logado:\n"+
                             mAuth.getCurrentUser().getUid() +"\n" +
                             mAuth.getCurrentUser().getEmail() +"\n"
                     ,
-                    Toast.LENGTH_SHORT).show();
+                    Toast.LENGTH_SHORT).show();*/
         }
 
     }
@@ -102,8 +102,8 @@ public class TelaInicial extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             System.out.println("Erro: " + task.getException());
-                            Toast.makeText(TelaInicial.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(TelaInicial.this, "Authentication failed.",
+                               //     Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                         }
                     }
