@@ -72,8 +72,8 @@ public class Alerta extends AppCompatActivity {
             lista.setAdapter(meuAdapter);
             for (int i=0; i<listaMovimentos.size(); i++){
                 MovimentoOBJ mv= listaMovimentos.get(i);
-                linhas.add(mv.getRua()+ "," + mv.getNumero() + "," + mv.getBairro() + "," + mv.getComplemento() + ","
-                        + mv.getCEP() + "," + mv.getPontoRef() + ",");
+                linhas.add(mv.getNumero()+ "," + mv.getRua() + "," + mv.getBairro() + "," + mv.getComplemento() + ","
+                        + mv.getCEP() + "," + mv.getPontoRef());
 
             }
 

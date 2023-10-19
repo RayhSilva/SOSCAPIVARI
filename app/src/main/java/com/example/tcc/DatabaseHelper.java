@@ -130,25 +130,48 @@ public class DatabaseHelper {
 
     }
 
+
+    /*public void inseriralerta(String strRua, String strNumero, String strBairro, String strCEP, String strPontoRef, String strComplemento) {
+
+        String id = reference.child("CadastroA").push().getKey();
+        MovimentoOBJ movimentoOBJ = new MovimentoOBJ (id, strRua , strNumero, strBairro, strCEP, strPontoRef, strComplemento );
+
+        reference.child("CadastroA").child(id).setValue(movimentoOBJ).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(context, "Alerta Inserido", Toast.LENGTH_SHORT).show();
+                CadastroAlerta la = new CadastroAlerta();
+                la.activity.finish();
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(context, "Falha ao Inserir Alerta\n"+e, Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }*/
+
     public void inseriralerta(String strRua, String strNumero, String strBairro, String strCEP, String strPontoRef, String strComplemento) {
 
-    String id = reference.child("CadastroA").push().getKey();
-    MovimentoOBJ movimentoOBJ = new MovimentoOBJ (id, strRua , strNumero, strBairro, strCEP, strPontoRef, strComplemento );
+        String id = reference.child("CadastroA").push().getKey();
+        MovimentoOBJ movimentoOBJ = new MovimentoOBJ (id, strRua , strNumero, strBairro, strCEP, strPontoRef, strComplemento );
 
-    reference.child("CadastroA").child(id).setValue(movimentoOBJ).addOnSuccessListener(new OnSuccessListener<Void>() {
-        @Override
-        public void onSuccess(Void unused) {
-            Toast.makeText(context, "Alerta Inserido", Toast.LENGTH_SHORT).show();
-            CadastroAlerta la = new CadastroAlerta();
-            la.activity.finish();
+        reference.child("CadastroA").child(id).setValue(movimentoOBJ).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(context, "Alerta Inserido", Toast.LENGTH_SHORT).show();
+                CadastroAlerta la = new CadastroAlerta();
+                la.activity.finish();
 
-        }
-    }).addOnFailureListener(new OnFailureListener() {
-        @Override
-        public void onFailure(@NonNull Exception e) {
-            Toast.makeText(context, "Falha ao Inserir Alerta\n"+e, Toast.LENGTH_LONG).show();
-        }
-    });
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(context, "Falha ao Inserir Alerta\n"+e, Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
@@ -163,8 +186,9 @@ public class DatabaseHelper {
                 listaAlertas = new ArrayList<MovimentoOBJ>();
                 for(DataSnapshot data : snapshot.getChildren()){
                     String id = data.child("id").getValue().toString();
-                   String Rua = data.child("rua").getValue().toString();
                     String Numero = data.child("numero").getValue().toString();
+                   String Rua = data.child("rua").getValue().toString();
+
                     String Bairro = data.child("bairro").getValue().toString();
                     String CEP = data.child("cep").getValue().toString();
                     String PontoRef = data.child("pontoRef").getValue().toString();
